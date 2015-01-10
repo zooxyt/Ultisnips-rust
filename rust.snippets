@@ -58,4 +58,21 @@ match ${1:expression} {
 }
 endsnippet
 
+snippet for "for ... (for)"
+for ${1:iterater} in ${2:expression} {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
+
+snippet forr "for x in range(0, 10) ... (forr)"
+for ${VISUAL}${1:${VISUAL/(.*)/x/}} in range(${VISUAL}${2:${VISUAL/(.*)/0/}}, ${VISUAL}${3:${VISUAL/(.*)/10/}}) {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
+
+snippet wh "while ... (while)"
+while (${1:condition}) {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
 
