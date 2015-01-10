@@ -1,0 +1,40 @@
+snippet main "main() (main)"
+fn main() {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
+
+snippet let "let name[:type]=exp (let)"
+let ${1:name}${2::type}= ${3:expression};
+endsnippet
+
+snippet if "if ... (if)"
+if (${1:condition}) {
+	${VISUAL}${2:${VISUAL/(.*)//}}
+} ${0}
+endsnippet
+
+snippet elif "else if ... (elif)"
+else if (${1:condition}) {
+	${VISUAL}${2:${VISUAL/(.*)//}}
+} ${0}
+endsnippet
+
+snippet el "else ... (else)"
+else {
+	${VISUAL}${1:${VISUAL/(.*)//}}
+} ${0}
+endsnippet
+
+snippet fn "fn ... () { ... } (fn)"
+fn ${1:name}(${2:parameters})${VISUAL} {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
+
+snippet fn-> "fn ... () -> ... { ... } (fn)"
+fn ${1:name}(${2:parameters}) -> ${VISUAL}${3:${VISUAL/(.*)/i32/}} {
+	${VISUAL}${0:${VISUAL/(.*)//}}
+}
+endsnippet
+
