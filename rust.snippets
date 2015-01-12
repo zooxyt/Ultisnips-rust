@@ -76,7 +76,11 @@ while (${1:condition}) {
 }
 endsnippet
 
-snippet prln "println ... (println)"
-println!("{}", ${1:condition});${0}
+snippet prlnexp "println ... (println)"
+println!("{}", ${1});${0}
+endsnippet
+
+snippet prlns "println ... (println)"
+println!("${1}");${0}
 endsnippet
 
