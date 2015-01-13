@@ -28,25 +28,25 @@ endsnippet
 
 snippet fn "fn ... () { ... } (fn)"
 fn ${1:name}(${2:parameters})${VISUAL} {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+	${0}
 }
 endsnippet
 
 snippet fn-> "fn ... () -> ... { ... } (fn)"
 fn ${1:name}(${2:parameters}) -> ${VISUAL}${3:${VISUAL/(.*)/i32/}} {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+	${0}
 }
 endsnippet
 
 snippet st "struct ... (struct)"
 struct ${1:name} {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+	${0}
 }
 endsnippet
 
 snippet en "enum ... (enum)"
 enum ${1:name} {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+	${0}
 }
 endsnippet
 
@@ -60,19 +60,19 @@ endsnippet
 
 snippet for "for ... (for)"
 for ${1:iterater} in ${2:expression} {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+	${0}
 }
 endsnippet
 
 snippet forr "for x in range(0, 10) ... (forr)"
 for ${VISUAL}${1:${VISUAL/(.*)/x/}} in range(${VISUAL}${2:${VISUAL/(.*)/0/}}, ${VISUAL}${3:${VISUAL/(.*)/10/}}) {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+	${0}
 }
 endsnippet
 
 snippet wh "while ... (while)"
-while (${1:condition}) {
-	${VISUAL}${0:${VISUAL/(.*)//}}
+while ${1:condition} {
+	${0}
 }
 endsnippet
 
@@ -82,5 +82,11 @@ endsnippet
 
 snippet prlns "println ... (println)"
 println!("${1}");${0}
+endsnippet
+
+snippet mod "mod ... (mod)"
+mod ${1:name} {
+	${0}
+}
 endsnippet
 
